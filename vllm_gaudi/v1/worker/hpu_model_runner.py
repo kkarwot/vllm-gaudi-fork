@@ -735,7 +735,6 @@ class HPUModelRunner(KVConnectorModelRunnerMixin):
             self.kv_cache_dtype,
             self.block_size,
             use_mla=self.model_config.use_mla,
-            use_sparse=False,
         )
 
         # Mult-modal-related.
