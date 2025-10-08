@@ -670,7 +670,7 @@ class HPUModelRunner(KVConnectorModelRunnerMixin):
         self.observability_config = vllm_config.observability_config
         self.is_driver_worker = is_driver_worker
         self.use_aux_hidden_state_outputs = False
-        self.use_sparse = False
+        # self.use_sparse = False
         self.supports_mm_inputs = False
 
         self.sampler = Sampler()
@@ -736,7 +736,7 @@ class HPUModelRunner(KVConnectorModelRunnerMixin):
             self.kv_cache_dtype,
             self.block_size,
             use_mla=self.model_config.use_mla,
-            use_sparse=self.model_config.use_sparse,
+            # use_sparse=self.model_config.use_sparse,
         )
 
         # Mult-modal-related.
